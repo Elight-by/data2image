@@ -53,6 +53,7 @@ with open(path_data_to_img, 'rb') as file:
 
 data_size = os.path.getsize(path_data_to_img)
 if data_size < 50 or data_size > 12684751875:
+    print("The file is too small or too big")
     exit()
 pixel_nm = math.ceil(data_size/3)
 a, b1 = find_dimensions(pixel_nm, 1.5)
